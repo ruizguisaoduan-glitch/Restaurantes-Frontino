@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Administrador</title>
+    <link rel="stylesheet" href="/static/estilos.css">
+
+<style>
+/* ===== ESTILO PROFESIONAL ===== */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #2c3e50, #4ca1af);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* Tarjeta */
+form {
+    background: #ffffff;
+    padding: 40px 45px;
+    border-radius: 18px;
+    width: 360px;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.20);
+    animation: fadeIn 0.8s ease;
+}
+
+/* Título */
+form h1 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 24px;
+    color: #2c3e50;
+    font-weight: 800;
+}
+
+/* Etiquetas */
+form label {
+    font-weight: 600;
+    color: #34495e;
+}
+
+/* Inputs */
+form input {
+    width: 100%;
+    padding: 12px;
+    margin-top: 8px;
+    margin-bottom: 18px;
+    border-radius: 10px;
+    border: 1px solid #d5d8dc;
+    font-size: 15px;
+    transition: 0.3s ease;
+}
+
+form input:focus {
+    border-color: #2980b9;
+    box-shadow: 0 0 5px rgba(41, 128, 185, 0.4);
+    outline: none;
+}
+
+/* Botón */
+button {
+    width: 100%;
+    background-color: #2980b9;
+    border: none;
+    padding: 14px 0;
+    border-radius: 10px;
+    color: white;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #1f6390;
+}
+
+/* Botón volver */
+a.btn {
+    position: absolute;
+    bottom: 25px;
+    text-decoration: none;
+    color: white;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 8px 16px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+}
+
+a.btn:hover {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+/* Error */
+.error-msg {
+    color: #e74c3c;
+    font-weight: bold;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Animación */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-15px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+</style>
+</head>
+
+<body>
+
+<form method="POST">
+    <h1>Iniciar Sesión</h1>
+
+    <label>Usuario:</label>
+    <input type="text" name="usuario" required>
+
+    <label>Contraseña:</label>
+    <input type="password" name="password" required>
+
+  
+    <button type="submit">Entrar</button>
+</form>
+
+<a href="/" class="btn">Volver</a>
+
+</body>
+</html>

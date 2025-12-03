@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Agregar Restaurante</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #eef2f7;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            width: 400px;
+            background: white;
+            padding: 30px;
+            border-radius: 14px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 25px;
+            font-size: 24px;
+            color: #2c3e50;
+        }
+
+        label {
+            font-weight: 600;
+            display: block;
+            margin-top: 15px;
+            margin-bottom: 5px;
+            color: #34495e;
+        }
+
+        input[type="text"],
+        input[type="file"] {
+            width: 100%;
+            padding: 12px;
+            border-radius: 8px;
+            border: 1px solid #d0d7de;
+            outline: none;
+            font-size: 15px;
+        }
+
+        input[type="text"]:focus {
+            border-color: #2980b9;
+            box-shadow: 0 0 4px rgba(41,128,185,0.4);
+        }
+
+        button {
+            width: 100%;
+            padding: 12px;
+            background: #27ae60;
+            border: none;
+            color: white;
+            font-size: 16px;
+            margin-top: 25px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        button:hover {
+            background: #1f8f4c;
+        }
+
+        .btn-volver {
+            margin-top: 20px;
+            display: block;
+            text-align: center;
+            background: #bdc3c7;
+            color: #2c3e50;
+            padding: 10px;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 600;
+        }
+
+        .btn-volver:hover {
+            background: #a0a6aa;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="card">
+    <h1>Agregar Restaurante</h1>
+
+    <form method="POST" enctype="multipart/form-data">
+        <label>Nombre:</label>
+        <input type="text" name="nombre" required>
+
+        <label>Dirección:</label>
+        <input type="text" name="direccion">
+
+        <label>Teléfono:</label>
+        <input type="text" name="telefono">
+        
+        <label>Hora de apertura:</label>
+        <input type="time" name="apertura">
+
+        <label>Hora de cierre:</label>
+        <input type="time" name="cierre">
+
+
+
+        <button type="submit">Guardar</button>
+    </form>
+
+    <a href="/admin" class="btn-volver">⬅ Volver</a>
+</div>
+
+</body>
+</html>
